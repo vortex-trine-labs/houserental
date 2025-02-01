@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    border-bottom: 5px solid #1E3A8A;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 50, 0.5);
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    width: 85%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    gap: 20px;
+}
+
+/* Sidebar */
+.profile-sidebar {
+    width: 28%;
+    text-align: center;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.profile-sidebar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.upload-btn {
+    display: block;
+    background: #1E3A8A;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    width: 80%;
+}
+
+.upload-btn:hover {
+    background: #142b6f;
+}
+
+.edit-btn {
+    background: #142b6f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.edit-btn:hover {
+    background: #1E3A8A;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid #1E3A8A;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: #ddd;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #1E3A8A;
+    color: white;
+}
+
+.tab-btn:hover {
+    background: #1E3A8A;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Form Inputs */
+input[type="text"], input[type="email"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+.save-btn {
+    background: #1E3A8A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background: #142b6f;
+}
+
+/* Footer */
+.footer {
+    background: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+        border-right: none;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .save-btn {
+        padding: 15px 20px;
+    }
+}

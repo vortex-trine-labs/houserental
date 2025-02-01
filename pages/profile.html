@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Rental Hub</title>
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!-- Common Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <h1>Welcome, <span id="username">User</span>!</h1>
+        <p>Manage your account, track your listings, and update your profile effortlessly.</p>
+    </section>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <img id="profile-pic" src="../assets/images/default.jpg" alt="Profile Picture">
+            <input type="file" id="upload-photo" style="display:none;">
+            <label for="upload-photo" class="upload-btn">Upload New Photo</label>
+            <h2 id="name">John Doe</h2>
+            <p id="email">johndoe@example.com</p>
+            <p id="phone">+1 234 567 890</p>
+            <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
+        </div>
+
+        <!-- Profile Details & Actions -->
+        <div class="profile-content">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('personal-info')">Personal Information</button>
+                <button class="tab-btn" onclick="showTab('my-listings')">My Listings</button>
+                <button class="tab-btn" onclick="showTab('saved-properties')">Saved Properties</button>
+                <button class="tab-btn" onclick="showTab('settings')">Settings & Security</button>
+            </div>
+
+            <div id="personal-info" class="tab-content active">
+                <h3>Personal Information</h3>
+                <label>Name: <input type="text" id="edit-name" value="John Doe"></label>
+                <label>Email: <input type="email" id="edit-email" value="johndoe@example.com"></label>
+                <label>Phone: <input type="text" id="edit-phone" value="+1 234 567 890"></label>
+                <button class="save-btn" onclick="saveProfile()">Save Changes</button>
+            </div>
+
+            <div id="my-listings" class="tab-content">
+                <h3>My Listings</h3>
+                <ul id="listings"></ul>
+            </div>
+
+            <div id="saved-properties" class="tab-content">
+                <h3>Saved Properties</h3>
+                <ul id="saved-listings"></ul>
+            </div>
+
+            <div id="settings" class="tab-content">
+                <h3>Settings & Security</h3>
+                <button class="change-password">Change Password</button>
+                <button class="delete-account">Delete Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Footer -->
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

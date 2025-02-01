@@ -1,0 +1,43 @@
+/* Header Styles */
+header {
+    color: black; /* No background color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align profile button to the right */
+    align-items: center;
+}
+
+#profile-btn {
+    background: none;
+    color: black; /* Adjusted color to fit without background */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-options {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-options a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+.profile-options a:hover {
+    background-color: #555;
+}
+
+.nav-links {
+    position: relative;
+}

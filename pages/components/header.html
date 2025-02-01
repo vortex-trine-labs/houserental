@@ -1,0 +1,131 @@
+<style>
+/* Header Styles */
+header {
+    color: #333; /* Set text color to dark gray for better visibility */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px; /* Adjust logo size */
+    font-weight: bold;
+}
+
+#home-btn {
+    background: none;
+    color: #333; /* Set text color to dark gray */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#profile-btn {
+    background: none;
+    color: #333;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-options {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-options a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+.profile-options a:hover {
+    background-color: #555;
+}
+
+.nav-links {
+    position: relative;
+    display: flex;
+    gap: 15px; /* Add some space between the buttons */
+}
+
+</style>
+
+<!-- Header -->
+<header id="header-container">
+    <div class="logo">🐦‍🔥</div>
+    <div class="nav-links">
+        <button id="home-btn" onclick="goHome()">🏠 Home</button>
+        <button id="profile-btn" onclick="toggleProfileOptions()">👤 Profile</button>
+        <div id="profile-options" class="profile-options">
+            <a href="#" onclick="goToProfile()">Profile</a>
+            <a href="#" onclick="goToSettings()">Settings</a>
+            <a href="#" id="login-logout-btn" onclick="toggleLoginLogout()">Log In</a>
+        </div>
+    </div>
+</header>
+
+<script>
+
+ function goHome() {
+        window.location.href = "../index.html"; // Go to the home page in the root directory
+    }
+
+
+// Toggle the profile options dropdown
+function toggleProfileOptions() {
+    const profileOptions = document.getElementById("profile-options");
+    profileOptions.style.display = profileOptions.style.display === "block" ? "none" : "block";
+}
+
+// Handle navigation to the profile page
+function goToProfile() {
+    window.location.href = "/profile"; // Replace with actual profile page URL
+}
+
+// Handle navigation to the settings page
+function goToSettings() {
+    window.location.href = "/settings"; // Replace with actual settings page URL
+}
+
+// Toggle the login/logout button based on user authentication
+function toggleLoginLogout() {
+    const loginLogoutBtn = document.getElementById("login-logout-btn");
+
+    // Example: Check if user is logged in (for demo purposes, using localStorage)
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+        localStorage.setItem("isLoggedIn", "false"); // Log out the user
+        loginLogoutBtn.innerText = "Log In";
+        alert("You have been logged out.");
+    } else {
+        localStorage.setItem("isLoggedIn", "true"); // Log in the user
+        loginLogoutBtn.innerText = "Log Out";
+        alert("You are logged in.");
+    }
+}
+
+// Check login status when page loads
+document.addEventListener("DOMContentLoaded", () => {
+    const loginLogoutBtn = document.getElementById("login-logout-btn");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    // Set initial button text based on login status
+    if (isLoggedIn === "true") {
+        loginLogoutBtn.innerText = "Log Out";
+    } else {
+        loginLogoutBtn.innerText = "Log In";
+    }
+});
+
+</script>

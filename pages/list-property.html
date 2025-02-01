@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Property</title>
+    <link rel="stylesheet" href="../assets/css/list-property.css">
+    <script defer src="../assets/js/list-property.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <header>
+       <div id="header-container"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>List Your Property – Reach the Right Buyers & Renters!</h1>
+                <p>Easily list your property, set your price, and attract potential buyers or tenants.</p>
+                <a href="#propertyForm" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Property Submission Form -->
+        <section class="property-form">
+            <h2>Submit Your Property Details</h2>
+            <form id="propertyForm">
+                <div class="form-group">
+                    <label for="title"><i class="fas fa-home"></i> Property Title:</label>
+                    <input type="text" id="title" name="title" required placeholder="Enter a catchy title">
+                </div>
+
+                <div class="form-group">
+                    <label for="description"><i class="fas fa-align-left"></i> Description:</label>
+                    <textarea id="description" name="description" required placeholder="Describe your property"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="type"><i class="fas fa-building"></i> Property Type:</label>
+                    <select id="type" name="type">
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location"><i class="fas fa-map-marker-alt"></i> Location:</label>
+                    <input type="text" id="location" name="location" required placeholder="Enter property location">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price"><i class="fas fa-dollar-sign"></i> Price:</label>
+                        <input type="number" id="price" name="price" required placeholder="Enter price">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bedrooms"><i class="fas fa-bed"></i> Bedrooms:</label>
+                        <input type="number" id="bedrooms" name="bedrooms" required placeholder="No. of bedrooms">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bathrooms"><i class="fas fa-bath"></i> Bathrooms:</label>
+                        <input type="number" id="bathrooms" name="bathrooms" required placeholder="No. of bathrooms">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="area"><i class="fas fa-ruler-combined"></i> Area (sq. ft):</label>
+                    <input type="number" id="area" name="area" required placeholder="Total area in sq. ft">
+                </div>
+
+                <div class="form-group">
+                    <label for="available"><i class="fas fa-calendar-alt"></i> Available From:</label>
+                    <input type="date" id="available" name="available" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="images"><i class="fas fa-upload"></i> Upload Images:</label>
+                    <input type="file" id="images" name="images" multiple accept="image/*">
+                    <div id="imagePreview"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Property</button>
+            </form>
+            <p id="successMessage" class="success-message">🎉 Property listed successfully!</p>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <footer id="footer-placeholder"></footer>
+</body>
+</html>

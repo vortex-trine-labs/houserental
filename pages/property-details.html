@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="../assets/css/property-details.css">
+</head>
+<body>
+<header id="header-container">
+    <div class="logo">🐦‍🔥 Flare</div>
+    <div class="nav-links">
+        <button id="home-btn" class="nav-btn" onclick="goHome()">🏠 Home</button>
+        <div class="profile-dropdown">
+            <button id="profile-btn" class="nav-btn" onclick="toggleProfileOptions()">👤 Profile</button>
+            <div id="profile-options" class="profile-options">
+                <a href="#" onclick="goToProfile()">Profile</a>
+                <a href="#" onclick="goToSettings()">Settings</a>
+                <a href="#" id="login-logout-btn" onclick="toggleLoginLogout()">Log In</a>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <main>
+    <div class="property-container">
+        <img id="property-image" src="" alt="Property Image" class="property-image">
+        <div class="property-details">
+            <h2 id="property-title" class="property-title"></h2>
+            <p id="property-description" class="property-description"></p>
+            <div class="property-info">
+                <p><strong>Location:</strong> <span id="property-location"></span></p>
+                <p><strong>Price:</strong> $<span id="property-price"></span></p>
+                <p><strong>Size:</strong> <span id="property-size"></span> sq ft</p>
+                <p><strong>Bedrooms:</strong> <span id="property-bedrooms"></span></p>
+                <p><strong>Bathrooms:</strong> <span id="property-bathrooms"></span></p>
+                <p><strong>Amenities:</strong> <span id="property-amenities"></span></p>
+                <p><strong>Contact:</strong> <span id="property-contact"></span></p>
+            </div>
+            <div id="result-message" class="hidden"></div>
+            <button class="back-button" onclick="goBackToListings()">⬅ Back to Listings</button>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>🏡 Vortex Trine Labs</h3>
+            <p>Find your dream home with ease. Trusted listings, secure transactions, and expert guidance.</p>
+        </div>
+        <div class="footer-section">
+            <h3>📍 Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="properties.html">Properties</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>📞 Contact Us</h3>
+            <p>📧 Email: support@vortextrinelabs.com</p>
+            <p>📞 Phone: +00 0000000000</p>
+            <p>Vortex Trine Labs</p>
+        </div>
+        <div class="footer-section">
+            <h3>🔗 Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="../assets/icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/icons/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="../assets/icons/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Vortex Trine Labs. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="../assets/js/property-details.js"></script>
+</body>
+</html>

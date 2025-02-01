@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Add Leaflet CSS & JS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <title>Find Your Dream Home</title>
+    <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+
+<body>
+
+ <header id="header-container"></header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Find Your Dream Home Today!</h1>
+            <p>Find affordable homes, apartments, and condos with just one search.</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+  <section id="search-section" class="search-container">
+    <h2>🔍 Search Properties</h2>
+    <form id="searchForm" onsubmit="submitSearch(event)">
+        <div class="search-fields">
+            <input type="text" id="location" name="location" placeholder="📍 Enter Location" required>
+
+            <select id="propertyType" name="propertyType">
+                <option value="">🏠 Property Type</option>
+                <option value="Apartment">Apartment</option>
+                <option value="House">House</option>
+                <option value="Condo">Condo</option>
+            </select>
+
+            <select id="bhk" name="bhk">
+                <option value="">🛏️ BHK Type</option>
+                <option value="1 BHK">1 BHK</option>
+                <option value="2 BHK">2 BHK</option>
+                <option value="3 BHK">3 BHK</option>
+                <option value="4 BHK">4 BHK</option>
+            </select>
+
+            <label class="price-label">💰 Price:</label>
+            <input type="range" id="minPrice" name="minPrice" min="8000" max="30000" step="500" value="8000" oninput="updatePrice()">
+            <input type="range" id="maxPrice" name="maxPrice" min="8000" max="30000" step="500" value="30000" oninput="updatePrice()">
+            <span id="priceRange">₹8000 - ₹30000</span>
+
+            <button type="submit">🔍 Search Now</button>
+        </div>
+    </form>
+</section>
+
+
+
+    <!-- Map Section -->
+    <section id="map-container">
+        <h2>📍 Explore Nearby</h2>
+        <div id="map"></div>
+    </section>
+
+   <!-- Search Results -->
+	<section id="results-container">
+		<h2>🏡 Available Properties</h2>
+		<div id="results" class="results-grid"></div>
+	</section>
+
+
+	<!-- Footer -->
+	<div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/search.js"></script>
+</body>
+</html>
